@@ -1,6 +1,6 @@
 name: "South Lanarkshire Bin Collection"
 description: "Tracks bin collections days"
-version: "0.0.2"
+version: "0.0.3"
 slug: "south-lanarkshire-bin-collections"
 arch:
   - aarch64
