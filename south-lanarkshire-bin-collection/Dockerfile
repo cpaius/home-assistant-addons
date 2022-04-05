@@ -5,6 +5,9 @@ FROM $BUILD_FROM
 COPY scripts/run.sh /
 COPY scripts/python/south_lanarkshire_council.py /
 COPY scripts/python/requirements.txt /
+COPY scripts/execute-get-bin-collections.sh /
+COPY scripts/env.sh /
+
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
