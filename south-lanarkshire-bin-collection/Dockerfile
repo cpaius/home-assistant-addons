@@ -13,3 +13,4 @@ COPY scripts/env.sh /
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
