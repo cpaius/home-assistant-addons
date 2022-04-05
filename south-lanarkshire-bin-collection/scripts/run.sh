@@ -4,13 +4,15 @@ echo "Running South Lanarkshire Bin Collection addon"
 
 mkdir -p collections
 pushd collections
+declare refresh_interval
 
-REFRESH_INTERVAL=$(bashio::config 'refresh_interval')
-echo "Refresh interval $REFRESH_INTERVAL"
+refresh_interval=$(bashio::config 'refresh_interval')
+
+bashio::log.info "Refresh interval ${refresh_interval}"
 sh /collections/execute-get-bin-collections.sh
 
-echo "sh /collections/execute-get-bin-collections.sh" > /etc/periodic/$REFRESH_INTERVAL/collections
-chmod +x /etc/periodic/$REFRESH_INTERVAL/collections
+echo "sh /collections/execute-get-bin-collections.sh" > /etc/periodic/${refresh_interval}/collections
+chmod +x /etc/periodic/${refresh_interval}/collections
 
 
 
