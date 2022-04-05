@@ -1,6 +1,8 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+RUN apk add --no-cache python3
+
 # Copy data for add-on
 COPY scripts/run.sh /
 COPY scripts/python/south_lanarkshire_council.py /
