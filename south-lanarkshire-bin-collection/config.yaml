@@ -9,6 +9,6 @@ arch:
   - armv7
   - i386
 options:
-  refresh_interval_seconds: 3600
+  refresh_interval: hourly
 schema:
-  refresh_interval_seconds: int
+  refresh_interval: list(15min|hourly|daily)
