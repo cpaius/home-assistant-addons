@@ -6,13 +6,11 @@ mkdir -p collections
 pushd collections
 declare refresh_interval
 
-refresh_interval=$(bashio::config 'refresh_interval')
 
-bashio::log.info "Refresh interval ${refresh_interval}"
 sh /collections/execute-get-bin-collections.sh
 
-echo "sh /collections/execute-get-bin-collections.sh" > /etc/periodic/${refresh_interval}/collections
-chmod +x /etc/periodic/${refresh_interval}/collections
+echo "sh /collections/execute-get-bin-collections.sh" > /etc/periodic/hourly/collections
+chmod +x /etc/periodic/hourly/collections
 
 
 
