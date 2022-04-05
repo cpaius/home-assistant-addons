@@ -1,0 +1,10 @@
+name: "South Lanarkshire Bin Collection"
+description: "Tracks bin collections days"
+version: "0.0.1"
+slug: "south-lanarkshire-bin-collections"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
