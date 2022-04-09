@@ -37,7 +37,7 @@ def get_bin_collections_from_html(url):
     service_details = soup.find("div", {"class": 'serviceDetails'})
 
     for bins in service_details.findAll("div", {"class": 'bin-dir-snip'}):
-        
+
         lis = []
         for ul in bins.findAll('ul'):
 
@@ -78,7 +78,7 @@ if __name__ == '__main__':
         full_file_name = os.path.join(output_folder_name, bin_color + ".json")
         with open(full_file_name, 'w+') as f:
             json.dump(result, f)
-
+    hass.states.set("sensor.bin_collections", active_collections)
     with open(os.path.join(output_folder_name, "all.json"), 'w+') as f:
         json.dump(all_collections, f)
     with open(os.path.join(output_folder_name, "active.json"), 'w+') as f:

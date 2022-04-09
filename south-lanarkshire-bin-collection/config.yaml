@@ -12,3 +12,5 @@ options:
   refresh_interval: hourly
 schema:
   refresh_interval: list(15min|hourly|daily)
+homeassistant_api: true
+core_api: true
